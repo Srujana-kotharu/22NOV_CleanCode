@@ -12,6 +12,8 @@ review3.cs
 int iCounter;
 string strFullName;
 DateTime dModifiedDate;
+int Counter;
+string fullName;
 DateTime modifiedDate;
 
 review4.cs
