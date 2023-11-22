@@ -1,0 +1,192 @@
+review1.cs
+public bool IsShopOpen(string day)
+{
+    if (!string.IsNullOrEmpty(day))
+    {
+        day = day.ToLower();
+        if (day == "friday")
+        {
+            return true;
+        }
+        else if (day == "saturday")
+        {
+            return true;
+        }
+        else if (day == "sunday")
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
+}
+//1
+public bool IsShopOpen(string day)
+{
+    if (!string.IsNullOrEmpty(day))
+    {
+        day = day.ToLower();
+        if (day == "friday"|| "sarurday" || "sunday")
+        {
+            return true;
+        }
+        return false;
+    }
+    return false;
+
+}
+//2
+public bool IsShopOpen(string day){
+    if(string.IsNullOrEmpty(day)){
+        return false;
+    }
+}
+var openingDays=new[] {"friday"|| "sarurday" || "sunday"};
+return openingDays.Any(d=> d=day.ToLower());
+
+review3.cs
+public long Fibonacci(int n)
+{
+    if (n < 50)
+    {
+        if (n != 0)
+        {
+            if (n != 1)
+            {
+                return Fibonacci(n - 1) + Fibonacci(n - 2);
+            }
+            else
+            {
+                return 1;
+            }
+        }
+        else
+        {
+            return 0;
+        }
+    }
+    else
+    {
+        throw new System.Exception("Not supported");
+    }
+}
+//1
+public long Fibonacci(int n)
+{
+    if(n<50)
+    {
+        if(n==0 || n==1) return n;
+        return Fibonacci(n-1) + Fibonacci(n-2);
+    }
+    else
+    {
+        throw new System.Exception("Not supported");
+    }
+ 
+}
+
+review4.cs
+var l = new[] { "Austin", "New York", "San Francisco" };
+
+for (var i = 0; i < l.Count(); i++)
+{
+    var li = l[i];
+    DoStuff();
+    DoSomeOtherStuff();
+
+    // ...
+    // ...
+    // ...
+    // Wait, what is `li` for again?
+    Dispatch(li);
+}
+//1
+var listOfCities=  new[] { "Austin", "New York", "San Francisco" };
+for (var i = 0; i < city.Count(); i++)
+{
+    var city = listOfCities[i];
+    DoStuff();
+    DoSomeOtherStuff();
+
+    // ...
+    // ...
+    // ...
+    // Wait, what is `li` for again?
+    Dispatch(city);
+}
+
+review5.cs
+if (userRole == 8) // Check if Admin 
+{
+    
+}
+//
+const string ADMIN_ROLE="Admin"
+if(userRole=ADMIN_ROLE){
+    //logic
+}
+
+review6.cs
+public class Car
+{
+    public string CarMake { get; set; }
+    public string CarModel { get; set; }
+    public string CarColor { get; set; }
+
+    //...
+}
+//
+public class Car
+{
+    public string make { get; set; }
+    public string model { get; set; }
+    public string color { get; set; }
+
+    //...
+}
+
+review7.cs
+var ymdstr = DateTime.UtcNow.ToString("MMMM dd, yyyy");
+//variable name
+var currentDateTime= DateTime.UtcNow.ToString("MMMM dd, yyyy");
+
+review9.cs
+public void CreateMicrobrewery(string name = null)
+{
+    var breweryName = !string.IsNullOrEmpty(name) ? name : "Hipster Brew Co.";
+    // ...
+}
+//directly u can assign name
+public void CreateMicrobrewery( var breweryName = "Hipster Brew Co.";)
+{
+   
+    // ...
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
